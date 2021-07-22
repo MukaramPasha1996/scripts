@@ -31,4 +31,4 @@ while read line; do echo Domain of the IP address $IP_ADDRESS is $line; done < t
  esac
 
 done < <(tail -n +2 data.csv)
-{"mode":"full","isActive":false}
+
