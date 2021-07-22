@@ -1,16 +1,15 @@
 #! /bin/bash
 # This script is created by Mukaram Pasha, Security analyst currently working at ATOS.
 echo ""
-echo ""
-echo ""
-echo ""
  figlet -f small "Reverse NS lookup Script"
-echo ""
 echo ""
 echo ""
 echo " Created by -"
 figlet -f small "Mukaram Pasha"
 echo ""
+echo "Linkedin - https://www.linkedin.com/in/mukaram-pasha-67708315b"
+echo "Script running time"
+date
 echo ""
 echo ""
 echo "Prerequsite - Add the IPs in a file with the name data.csv"
@@ -26,9 +25,11 @@ case "$TEMPNUM" in
 
  dig -x $IP_ADDRESS +short > temp.txt
 
-echo "Domain of the IP address $IP_ADDRESS is"; cat temp.txt
+while read line; do echo Domain of the IP address $IP_ADDRESS is $line; done < temp.txt
 
    ;;
  esac
 
 done < <(tail -n +2 data.csv)
+{"mode":"full","isActive":false}
+root@Dilby-Server07:/home/mukaram.p
